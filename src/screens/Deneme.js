@@ -3,6 +3,12 @@ import {View, Text, Button} from 'react-native';
 
 class Deneme extends Component {
 
+    static navigationOptions = ({navigation}) => {
+      return {
+          tabBarLabel : navigation.getParam('baslikGetir', 'baslikYOK')
+      }
+    };
+
     render () {
 
         const {navigation} = this.props;
